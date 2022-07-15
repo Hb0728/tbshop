@@ -1,0 +1,54 @@
+{
+	"pages": [{
+		"path": "pages/tabbar/index/index",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/tabbar/buy_car/buy_car",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, {
+		"path": "pages/tabbar/ucenter/ucenter",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#d81e06",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/tabbar/index/index",
+			"iconPath": "/static/img/index.png",
+			"selectedIconPath": "/static/img/index_selected.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/tabbar/buy_car/buy_car",
+			"iconPath": "/static/img/buy_car.png",
+			"selectedIconPath": "/static/img/buy_car_selected.png",
+			"text": "购物车"
+		}, {
+			"pagePath": "pages/tabbar/ucenter/ucenter",
+			"iconPath": "/static/img/user.png",
+			"selectedIconPath": "/static/img/user_selected.png",
+			"text": "我的"
+		}]
+	}
+}
