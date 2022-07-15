@@ -309,9 +309,6 @@
 		.product_item_l {
 			width: 350rpx;
 		}
-		.huang{
-			
-		}
 		.product_item_r {
 			width: 350rpx;
 		}
