@@ -20,6 +20,13 @@
 			"enablePullDownRefresh": false
 		}
 
+	}, {
+		"path": "pages/content/content",
+		"style": {
+			"navigationBarTitleText": "内容页",
+			"enablePullDownRefresh": false
+		}
+
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
