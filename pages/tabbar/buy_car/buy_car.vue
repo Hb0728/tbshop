@@ -5,7 +5,7 @@
 		</view>
 		<view v-else class="" v-for="item in carList" :key="item.content_id">
 			<label>
-				<checkbox :value="item.isSelected" :checked="item.isSelected" @click="changeSelected(item.isSelected)"/>
+				<checkbox :value="item.isSelected" :checked="item.isSelected" @click="changeSelected(item)"/>
 				<text></text>
 			</label>
 		
@@ -28,7 +28,7 @@
 			}
 		},
 		methods: {
-			changeSelected(){
+			changeSelected(data){
 				
 			}
 		},
@@ -37,9 +37,7 @@
 			allPrice(){
 				let allprice=0
 				this.carList.forEach(item=>{
-					console.log(item.price*item.num)
-					
-					allprice+=(item.price*item.num)
+					if(item.isSelected) allprice+=(item.price*item.num)
 				})
 				return allprice
 			}
