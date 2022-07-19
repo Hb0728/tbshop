@@ -50,16 +50,18 @@
 			return {
 				current: 1,
 				product_info:{
+					isSelected:true,
 					content_id: '23',
+					price:'',
 					swiperArr: [{
 						image: 'https://picsum.photos/id/66/375/150',
-						id: 66
+						id: 66,
 					}, {
 						image: 'https://picsum.photos/id/69/375/150',
-						id: 69
+						id: 69,
 					}, {
 						image: 'https://picsum.photos/id/99/375/150',
-						id: 99
+						id: 99,
 					}]
 				}
 			}
@@ -83,6 +85,7 @@
 		},
 		onLoad(data) {
 			this.product_info.content_id = data.id
+			this.product_info.price = data.price	
 		}
 	}
 </script>

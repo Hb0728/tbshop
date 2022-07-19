@@ -135,7 +135,7 @@
 						</swiper-item>
 					</swiper>
 				</view>
-				<navigator :url="`/pages/content/content?id=${item.id}`" open-type="redirect" class="product_container" v-for="item in product_list_l" :key="item.id">
+				<navigator :url="`/pages/content/content?id=${item.id}&price=${item.price}`" open-type="redirect" class="product_container" v-for="item in product_list_l" :key="item.id">
 					<view class="product_pic">
 						<view class="">
 							<image :src="item.Image" style="width: 350rpx;height: 350rpx;" mode=""></image>
@@ -151,7 +151,7 @@
 				</navigator>
 			</view>
 			<view class="product_item_r">
-				<navigator :url="`/pages/content/content?id=${item.id}`" class="product_container" v-for="item in product_list_r" :key="item.id">
+				<navigator :url="`/pages/content/content?id=${item.id}&price=${item.price}`" class="product_container" v-for="item in product_list_r" :key="item.id">
 					<view class="product_pic">
 						<view class="">
 							<image :src="item.Image" style="width: 350rpx;height: 350rpx;" mode=""></image>
