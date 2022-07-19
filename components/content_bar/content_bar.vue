@@ -2,20 +2,33 @@
 	<view class="content_bar">
 		<slot name="icon"></slot>
 		<view class="d-flex align-items-center ">
-			<button class="mx-0 joinCar btn-lit-orange">加入购物车</button>
+			<button class="mx-0 joinCar btn-lit-orange" @click="joinCar">加入购物车</button>
 			<button class="mx-0 nowBuy btn-orange">立即购买</button>
 		</view>
 	</view>
 </template>
 
 <script>
+	import {mapActions} from 'vuex'
 	export default {
 		name:"content_bar",
 		data() {
 			return {
 				
 			};
-		}
+		},
+		methods:{
+			joinCar(){
+				this.addcarList(this.content_info)
+				uni.showToast({
+					title: '加入购物车成功',
+					duration: 2000
+				});
+			},
+			...mapActions(['addcarList'])
+			
+		},
+		props:['content_info']
 	}
 </script>
 
@@ -27,10 +40,13 @@
 		justify-content: space-between;
 		position: fixed;
 		background-color: #fff;
-		height: 100rpx;
+		height: 150rpx;
 		bottom: 0;
 		left: 0;
 		right: 0;
+		padding-top: 20rpx;
+		padding-bottom:60rpx;
+		box-sizing: border-box;
 	}
 	.btn-orange{
 		background-color: #FF5800;
